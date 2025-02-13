@@ -1,0 +1,207 @@
+<title>Prototype12's Stuff</title>
+<style>
+@font-face {
+  font-family: 'Bitty';
+  src: url('bitty.ttf');
+  font-weight: bold;
+}
+body {
+  background-color: #444;
+}
+.mainBox {
+  background-color: #aaa;
+  margin: 5;
+  padding: 10;
+  flex-direction: column;
+  display: flex;
+  overflow-x: auto;
+  display: none;
+}
+.subBox {
+  background-color: #ddd;
+  margin: 5;
+  padding: 10; 
+}
+.menuButton {
+  cursor: pointer;
+  padding: 5 0 5 0;
+}
+.b {
+  text-shadow:
+  .5px 0px 0px black,
+  0px .5px 0px black,
+  .5px .5px 0px black;
+  text-transform: uppercase;
+}
+h1 {
+  text-shadow:
+  2px 0px 0px black,
+  0px 2px 0px black,
+  2px 2px 0px black;
+  font-size: 40px;/*needs to be a multiple of 8 for font*/
+}
+h3 {
+  text-shadow:
+  1px 0px 0px black,
+  0px 1px 0px black,
+  1px 1px 0px black;
+  font-size: 24px;
+}
+</style>
+<div style="display:flex; height: 100%; font-family: Bitty">
+  <div class="mainBox" style="width: 125; display: block">
+    <!--div class="subBox" style="display: none">Back</div-->
+    <div class="subBox" style="overflow-x: hidden; user-select: none">
+      <div id=menuHome class="menuButton" onclick="changePage(0)">Home</div>
+      <div id=menuProjects class="menuButton" onclick="changePage(1)">Projects</div>
+      <div id=menuVideos class="menuButton" onclick="changePage(2)">Videos</div>
+      <div id=menuGames class="menuButton" onclick="changePage(3)">Games</div>
+      <div id=menuAlgorithms class="menuButton" onclick="changePage(4)">Algorithms</div>
+      <div id=menuPortal class="menuButton" onclick="changePage(5)">Portal</div>
+    </div>
+  </div>
+  <div id=homePage class="mainBox" style="flex-grow: 1"><!-- HOME PAGE -->
+    <div class="subBox"><h1>Home Page</h1></div>
+    <div class="subBox">
+      <h3>Recent projects</h3>
+      <dd>This Website</dd>
+    </div>
+    <div class="subBox">
+      <h3>About Me</h3>
+      <dd>
+      <dl>
+        <dt>Goals:</dt>
+          <dd>To become an full time AI researcher.</dd>
+          <dd>Or go into full time Artificial Life research.</dd>
+        <dt>Hobbies:</dt>
+          <dd>Programing</dd>
+          <dd>Reading</dd>
+          <dd>Building and playing games</dd>
+      </dl>
+      </dd>
+    </div>
+    <!--div class="subBox">
+      <h3>Links</h3>
+      <dl>
+        <dt>Undefined</dt>
+          <dd>Undefined</dd>
+        <dt>Undefined</dt>
+          <dd><a href="about:blank" target="_blank">about:blank</a></dd>
+      </dl>
+    </div-->
+  </div>
+  <div id=projectPage class="mainBox" style="flex-grow: 1"><!-- PROJECT PAGE -->
+    <div class="subBox"><h1>Projects</h1></div>
+    <div class="subBox"><!-- WIP SECTION -->
+      <h3>WebSite (WIP)</h3>
+      <dd>Website TODO list:</dd>
+      <dd>
+        <dl>
+          <dd>-Improve Home Page</dd>
+          <dd>-Algorithms Page</dd>
+          <dd>-Games Page</dd>
+        </dl>
+      </dd>
+    </div>
+    <div class="subBox"><!-- On Indefinite Hold SECTION -->
+      <h3>WFC (On Indefinite Hold)</h3>
+        <dd>Wave function collapse algorithm.</dd>
+        <dd><i>Not uploaded</i></dd>
+    </div>
+    <div class="subBox">
+      <h3>Video maker/editor (On Indefinite Hold)</h3>
+        <dd>A video maker in pure JS.</dd>
+        <dd><i>Not uploaded</i></dd>
+    </div>
+    <div class="subBox">
+      <h3>Physics Engine (On Indefinite Hold)</h3>
+        <dd>A basic box only 2d physics engine.</dd>
+        <dd><i>Not uploaded</i></dd>
+    </div>
+    <div class="subBox"><!-- Completed SECTION -->
+      <h3>Procedural Chemicals (Completed)</h3>
+        <dd>Procedural creation and reaction of new elements/materials/chemicals.</dd>
+        <dd><a href="./Procedural-Chemicals" target="_blank">Procedural Chemicals Demo</a></dd>
+    </div>
+    <div class="subBox">
+      <h3>Neural Networks (Completed)</h3>
+        <dd>Basic neural network lib.</dd>
+        <dd><a href="./Neural-Networks" target="_blank">Neural Networks Demo</a></dd>
+        <dd><iframe src="https://prototype-12.github.io/Neural-Networks/index.html" width=400 height=400>iframe not loaded</iframe></dd>
+    </div>
+  </div>
+
+  <div id=videoPage class="mainBox" style="flex-grow: 1"><!-- VIDEO PAGE -->
+    <div class="subBox"><h1>Videos</h1></div>
+    <div class="subBox">
+      <h3>Test Video</h3>
+      <dd>
+        <video controls width=500 style="border: 3px solid #73AD21; //margin: 25 0 50 100;">
+          <source src="videos/test.webm" type="video/webm" />
+        </video>
+      </dd>
+      <dd>A test video.</dd>
+    </div>
+    <div class="subBox">
+      <h3>Video format</h3>
+      <dd><i>The idea for this section is that people can remotly obtain and watch videos with their own software.</i></dd>
+      <dd>I've stored and formated my videos in such a way that they can be accessed remotely and easily.</dd>
+      <dd>You can compare the video-list.txt file with a localy saved one for new videos.</dd>
+      <dd>Or I may add a release time stamp(unix time of course) to videos in the furture.</dd>
+      <dd>If the above happens please check the video-list-format.txt for changes.</dd>
+      <dd>Example Code:</dd>
+      <dd><iframe src="fetch-example.txt" width=400 height=400>iframe not loaded</iframe></dd>
+    </div>
+  </div>
+  <div id=gamesPage class="mainBox" style="flex-grow: 1"><!-- GAMES PAGE -->
+    <div class="subBox"><h1>Games</h1></div>
+    <div class="subBox">
+WIP
+    </div>
+  </div>
+  <div id=algorithmsPage class="mainBox" style="flex-grow: 1"><!-- ALGORITHMS PAGE -->
+    <div class="subBox"><h1>Algorithms</h1></div>
+    <div class="subBox">
+    <div>Astar</div>
+    <div>WFC</div>
+    <div>Boids</div>
+    <div>Slime Mold</div>
+    <div>Spacial Hashing</div>
+    </div>
+  </div>
+  <div id=portalPage class="mainBox" style="flex-grow: 1"><!-- PORTAL PAGE -->
+    <div class="subBox"><h1>Portal</h1></div>
+    <div class="subBox">
+      <h3>Kadin's Stuff</h3>
+        <dd>My friend Kadin's stuff</dd>
+        <dd><a href="https://kadincool.github.io/" target="_blank">Kadin's homepage</a></dd>
+    </div>
+    <div class="subBox">
+      <h3>Xem's Stuff</h3>
+        <dd>An interesting fellow JS programmer</dd>
+        <dd><a href="https://xem.github.io/" target="_blank">Xem's homepage</a></dd>
+    </div>
+  </div>
+</div><!-- ^ NEW PAGES HERE ^ -->
+<script>
+changePage(0)
+function changePage(page) {
+  homePage.style.display = page==0?"block":"none"
+  menuHome.classList = "menuButton "+(page==0?"b":"")
+
+  projectPage.style.display = page==1?"block":"none"
+  menuProjects.classList = "menuButton "+(page==1?"b":"")
+
+  videoPage.style.display = page==2?"block":"none"
+  menuVideos.classList = "menuButton "+(page==2?"b":"")
+
+  gamesPage.style.display = page==3?"block":"none"
+  menuGames.classList = "menuButton "+(page==3?"b":"")
+
+  algorithmsPage.style.display = page==4?"block":"none"
+  menuAlgorithms.classList = "menuButton "+(page==4?"b":"")
+
+  portalPage.style.display = page==5?"block":"none"
+  menuPortal.classList = "menuButton "+(page==5?"b":"")
+}
+</script>

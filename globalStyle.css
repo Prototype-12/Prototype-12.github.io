@@ -7,16 +7,8 @@ html {
   font-family: 'Bitty';
 }
 body {
-padding: 0;
-margin: 0;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
-.link {
-  color: #00f;
-  text-decoration: underline;
+  padding: 0;
+  margin: 0;
 }
 .bodyBox {
   background-color: #444;
@@ -37,8 +29,11 @@ a {
   padding: 10;
 }
 .menuButton {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
   padding: 5 5 5 5;
+  display: block;
 }
 .menuButton:hover {
   background-color: #eee;
