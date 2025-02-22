@@ -12,7 +12,8 @@ body {
 }
 .bodyBox {
   background-color: #444;
-  display:flex;
+  display: flex;
+  height: 100vh;
 }
 .mainBox {
   background-color: #aaa;
